@@ -63,9 +63,7 @@ class initialise
 
     public function register_transform_filters()
     {
-        new filters\transforms\parsedown;
-        new filters\transforms\tailwind;
-        new filters\transforms\youtube_links_to_embeds;
+        
     }
 
 }
