@@ -1,6 +1,6 @@
 <?php 
 
-get_header();
+include( __DIR__ . '/template-parts/amp_header.php');
 
 while ( have_posts() ) :
 
@@ -12,27 +12,12 @@ while ( have_posts() ) :
 	$image   = get_the_post_thumbnail_url($post);
 
 	// -------------------------- TEMPLATE START ------------------------------
-	?>
+	
+		echo $content;
 
-	<article class="bg-white text-night">
-
-		<div class="flex py-3"> 
-
-			<div class="w-full overflow-hidden pb-40">
-
-				<?php echo $content;  ?>   
-
-			</div>
-
-		</div>
-
-	</article>
-
-
-	<?php
 	// -------------------------- TEMPLATE END --------------------------------
 
 
 endwhile;
 
-get_footer();
+include( __DIR__ . '/template-parts/amp_footer.php');
