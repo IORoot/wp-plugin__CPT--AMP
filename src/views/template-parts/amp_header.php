@@ -21,13 +21,11 @@
             ?>
         </style>
 
+        <?php do_action('page_builder_header_code'); ?>
+
         <?php 
-			do_action('page_builder_header_code'); 
-		?>
-
-        <link rel="canonical" href=".">
-
-        <title>AMP Page</title>
+            echo get_field('amp_header_tags');
+        ?>
 
         <?php include( __DIR__ . '/amp_schema.php'); ?>
 
